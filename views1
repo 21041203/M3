@@ -1,0 +1,14 @@
+from django.shortcuts import render
+
+def items_view(request):
+    items = [
+        {'name': 'Laptop', 'price': 1200},
+        {'name': 'Smartphone', 'price': 800},
+        {'name': 'Headphones', 'price': 150},
+        {'name': 'Book', 'price': 20},
+    ]
+    context = {
+        'items': items,
+    }
+    return render(request, 'items.html', context)
+  
